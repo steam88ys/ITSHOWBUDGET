@@ -8,10 +8,10 @@ namespace ITSHOWBUDGET
 {
     class UserInfo
     {
-        public int hakbun { get; set; }
-        public string name { get; set; }
-        public string department { get; set; }
-        public string contest { get; set; }
-        public double budget { get; set; }
+        public int hakbun { get; set; } // 학번
+        public string name { get; set; }    // 이름
+        public string department { get; set; }  // 학과
+        public string contest { get; set; } // 작품
+        public double budget { get; set; }  // 예산
     }
 }
