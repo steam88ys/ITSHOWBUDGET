@@ -44,12 +44,15 @@ namespace ITSHOWBUDGET
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            userInfoBindingSource.DataSource = userList;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            userInfoBindingSource.DataSource = from item in userList
+                                               where item.department.Equals("소프트웨어과") || item.department.Equals("웹솔루션과")
+                                               orderby item.hakbun ascending
+                                               select item;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,6 +63,28 @@ namespace ITSHOWBUDGET
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            userInfoBindingSource.DataSource = from item in userList
+                                               orderby item.name ascending
+                                               select item;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            userInfoBindingSource.DataSource = from item in userList
+                                               where item.department.Equals("디자인과")
+                                               orderby item.hakbun ascending
+                                               select item;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            userInfoBindingSource.DataSource = from item in userList
+                                               orderby item.budget descending
+                                               select item;
         }
     }
 }

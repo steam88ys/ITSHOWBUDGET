@@ -36,18 +36,20 @@ namespace ITSHOWBUDGET
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hakbunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.budgetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -59,6 +61,7 @@ namespace ITSHOWBUDGET
             this.dataGridView1.DataSource = this.userInfoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(21, 175);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(707, 248);
             this.dataGridView1.TabIndex = 0;
@@ -82,6 +85,7 @@ namespace ITSHOWBUDGET
             this.button2.TabIndex = 2;
             this.button2.Text = "가나다순";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -101,6 +105,7 @@ namespace ITSHOWBUDGET
             this.button4.TabIndex = 4;
             this.button4.Text = "디자인과";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -110,40 +115,46 @@ namespace ITSHOWBUDGET
             this.button5.TabIndex = 5;
             this.button5.Text = "예산이 높은순";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // userInfoBindingSource
-            // 
-            this.userInfoBindingSource.DataSource = typeof(ITSHOWBUDGET.UserInfo);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // hakbunDataGridViewTextBoxColumn
             // 
             this.hakbunDataGridViewTextBoxColumn.DataPropertyName = "hakbun";
             this.hakbunDataGridViewTextBoxColumn.HeaderText = "hakbun";
             this.hakbunDataGridViewTextBoxColumn.Name = "hakbunDataGridViewTextBoxColumn";
+            this.hakbunDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // departmentDataGridViewTextBoxColumn
             // 
             this.departmentDataGridViewTextBoxColumn.DataPropertyName = "department";
             this.departmentDataGridViewTextBoxColumn.HeaderText = "department";
             this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            this.departmentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contestDataGridViewTextBoxColumn
             // 
             this.contestDataGridViewTextBoxColumn.DataPropertyName = "contest";
             this.contestDataGridViewTextBoxColumn.HeaderText = "contest";
             this.contestDataGridViewTextBoxColumn.Name = "contestDataGridViewTextBoxColumn";
+            this.contestDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // budgetDataGridViewTextBoxColumn
             // 
             this.budgetDataGridViewTextBoxColumn.DataPropertyName = "budget";
             this.budgetDataGridViewTextBoxColumn.HeaderText = "budget";
             this.budgetDataGridViewTextBoxColumn.Name = "budgetDataGridViewTextBoxColumn";
+            this.budgetDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userInfoBindingSource
+            // 
+            this.userInfoBindingSource.DataSource = typeof(ITSHOWBUDGET.UserInfo);
             // 
             // Form1
             // 
