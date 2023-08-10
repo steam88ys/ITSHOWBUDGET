@@ -83,7 +83,7 @@ namespace ITSHOWBUDGET
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 109);
             this.button2.TabIndex = 2;
-            this.button2.Text = "가나다순";
+            this.button2.Text = "학생이름 가나다순";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
